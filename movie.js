@@ -21,10 +21,15 @@ function makeImages(movies){
     console.log(movies);
     container.innerHTML = '';
     for(let movie of movies){
+        const movieContainerLink = document.createElement('a');
         const img = document.createElement('img');
         img.src = movie.show.image ? movie.show.image.medium : 'https://via.placeholder.com/150'; 
+        const movieLink = document.createElement('a');
+        movieLink.href=movie.show.url;
+        movieLink.textContent = "Watch this movie";
 
-
-        container.appendChild(img);
+        movieContainerLink.appendChild(img); 
+        movieContainerLink.appendChild(movieLink); 
+        container.appendChild(movieContainerLink);
     }
 }
