@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title>Document</title>
     <style>
-               body {
+        body {
             min-width: 100VW;
             min-height: 100vh;
-            background-color: black;
+            background-color: rgb(12, 9, 9);
         }
 
         h1 {
             color: white;
             text-align: center;
+        }
+        h2 {
+            color: rgb(6, 145, 43);
+            text-align: center;
+            font-size: 2.5rem;
         }
 
         form {
@@ -23,15 +28,47 @@
             gap: 5px;
             margin-bottom: 40px;
         }
+        .Search-input {
+            font-size: 1.2rem;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+            width: 300px;
+            background-color: #fff;
+            color: #272727;
+        }
+
+        .Search {
+            font-size: 1.2rem;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: aqua;
+            color: white;
+            cursor: pointer;
+        }
+
+        .Search:hover {
+            background-color: #00b3b3;
+        }
 
         img {
             min-width: 100%;
-            display: block;
+            display: flex;
             box-shadow: 0 0 3px 2px rgb(189, 106, 97);
             transition: 0.34s ease-in-out;
             max-width: 100%;
             height: auto;
-            margin: 0 auto; /* Center the images horizontally */
+            margin: 0 auto;
+            padding: 5px;
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            background: #272727;
+            flex-direction: column;
+            list-style: none;
+            border-radius: 40px;
         }
 
         img:hover {
@@ -56,7 +93,7 @@
             background-color: aqua;
             color: white;
             font-weight: bold;
-            border-radius: 3px;
+            border-radius: 5px;
             box-shadow: 3px 2px 2px 3px rgb(105, 104, 104);
         }
 
@@ -66,32 +103,33 @@
 
         button:active {
             transform: translate(1px, 1px);
-            box-shadow: 2px 2px 2px 3px rgb(105, 104, 104);
+            box-shadow: 2px 2px 2px 3px rgb(64, 16, 221);
         }
 
         .image-container {
-            width: 90%;
+            width: 50%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 0.4fr));
-            gap: 10px;
+            gap: 5px;
             margin: 10px auto;
-            place-content: center;
+            place-content: none;
         }
 
-        /* Styling for anchor tag */
         .image-container a {
-            text-decoration: none; /* Remove underline */
-            color: aqua; /* Change color */
+            text-decoration: none;
+            color: aqua;
             font-weight: bold;
+            font-size: 1.8;
+            margin-top: auto;
+            padding: 15px 10px 0;
+            font-family: "Oswals" , sans-serif;
         }
 
-        /* Styling for paragraph tag */
         .image-container p {
-            text-align: left; /* Center the text */
-            margin-top: 5px; /* Add some space between image and text */
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
-
 </head>
 <body>
 <h1>movie Search API</h1>
@@ -99,50 +137,10 @@
     <input type="text" class="Search-input">
     <button class="Search">Search</button>
 </form>
+<h2>GO TO SEARCH FOR ALL MOVIES IN ABOVE SEARCH BOX........... </h2>
 <div class="image-container">
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/28/71435.jpg" alt="Image 1">
-        <p><a href="https://www.tvmaze.com/shows/7760/home-movies" target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/34/85682.jpg" alt="Image 2">
-        <p><a href="https://www.tvmaze.com/shows/10010/all-the-right-moves" target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/490/1226112.jpg" alt="Image 3">
-        <p><a href="https://www.tvmaze.com/shows/73152/sankat-mochan-mahabali-hanumaan" target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/20/51150.jpg" alt="Image 4">
-        <p><a href="https://www.tvmaze.com/shows/4286/the-new-scooby-doo-movies"target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/79/199028.jpg" alt="Image 5">
-        <p><a href="https://www.tvmaze.com/shows/21978/the-bugs-bunny-show" target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/444/1110011.jpg" alt="Image 6">
-        <p><a href="https://www.tvmaze.com/shows/49075/hello-mini" target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/245/614463.jpg" alt="Image 7">
-        <p><a href="https://www.tvmaze.com/shows/2520/orange-marmalade"target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/23/58736.jpg" alt="Image 8">
-        <p><a href="https://www.tvmaze.com/shows/5976/please-sir" target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/277/693758.jpg"alt="Image 9">
-        <p><a href="https://www.tvmaze.com/shows/51127/scam-1992-the-harshad-mehta-story"target="_blank">Watch this movie</a></p>
-    </a>
-    <a>
-        <img src="https://static.tvmaze.com/uploads/images/medium_portrait/167/418165.jpg" alt="Image 10">
-        <p><a href="https://www.tvmaze.com/shows/38613/dear-sister"target="_blank">Watch this movie</a></p>
-    </a>
+  
 </div>
-
-
 <script src="movie.js"></script>
 </body>
 </html>
